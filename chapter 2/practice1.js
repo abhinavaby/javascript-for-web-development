@@ -1,3 +1,6 @@
+//multiple of 5 guesser
+
+
 let a=prompt("enter a number: ");
 if(a%5==0){
     alert(`${a} is a multiple of 5`);

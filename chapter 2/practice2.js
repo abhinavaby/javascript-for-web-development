@@ -1,3 +1,7 @@
+//grade provider
+
+
+
 let mark=prompt("enter the mark: ");
 if(mark>=90 && mark<=100){
     alert("Grade: A");
