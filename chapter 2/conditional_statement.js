@@ -34,7 +34,7 @@ if (score >= 90) {
 } else if (score >= 70) {
     console.log("Grade: C");
 } else {
-    console.log("Grade: F");
+    console.log("Grade: F"); 
 }
 
 
@@ -56,3 +56,11 @@ switch (day) {
     default:
         console.log("Regular weekday."); // Runs if no cases match
 }
+
+
+
+// ternary operator
+let speed = 90;
+let ticket = speed > 100 ? "Maximum Fine" : speed > 80 ? "Standard Fine" : "No Fine";
+// Evaluates to: "Standard Fine"
+
