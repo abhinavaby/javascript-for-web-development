@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Properties Example</title>
+</head>
+<body>
+
+    <h2 id="heading">Welcome to DOM</h2>
+
+    <p id="para">
+        This is a <b>JavaScript</b> example.
+        <span style="display:none;">Hidden Text</span>
+    </p>
+
+    <button onclick="showProperties()">Access Properties</button>
+
+    <script>
+        function showProperties() {
+
+            // Select elements
+            let heading = document.getElementById("heading");
+            let para = document.getElementById("para");
+
+            // 1. tagName
+            console.log("tagName of heading:", heading.tagName);
+            // Output: H2
+
+            // 2. innerText
+            console.log("innerText:");
+            console.log(para.innerText);
+            // Output:
+            // This is a JavaScript example.
+
+            // 3. innerHTML
+            console.log("innerHTML:");
+            console.log(para.innerHTML);
+            // Output:
+            // This is a <b>JavaScript</b> example.
+            // <span style="display:none;">Hidden Text</span>
+
+            // 4. textContent
+            console.log("textContent:");
+            console.log(para.textContent);
+            // Output:
+            // This is a JavaScript example. Hidden Text
+
+            // Display all values together
+            alert(
+                "tagName: " + heading.tagName + "\n\n" +
+                "innerText: " + para.innerText + "\n\n" +
+                "innerHTML: " + para.innerHTML + "\n\n" +
+                "textContent: " + para.textContent
+            );
+        }
+    </script>
+
+</body>
+</html>

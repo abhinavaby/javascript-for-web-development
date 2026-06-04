@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create H2 Using JS</title>
+</head>
+<body>
+    <div style="border:4px solid black;" id="a"></div>
+
+    <script>
+        let h2 = document.createElement("h2");
+        h2.innerText = "Hello JavaScript";
+
+        // Append text
+        h2.innerText += " from Apna College students";
+        let div = document.getElementById("a");
+        div.appendChild(h2);
+
+        
+    </script>
+
+</body>
+</html>
