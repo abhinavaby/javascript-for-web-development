@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Manipulation - Insert & Delete Elements</title>
+</head>
+<body>
+
+    <div id="container" style="border:2px solid black; padding:10px;">
+        Original Element
+    </div>
+
+    <script>
+
+        // Select the node
+        let node = document.getElementById("container");
+
+        // Create a new element
+        let el = document.createElement("div");
+        el.innerText = "New Element";
+        el.style.backgroundColor = "lightblue";
+        el.style.padding = "10px";
+        el.style.margin = "5px";
+
+        /*
+        ==========================
+        INSERT ELEMENT METHODS
+        ==========================
+
+        node.append(el)
+        → Adds at the end of the node (inside)
+        */
+
+        // node.append(el);
+
+
+        /*
+        node.prepend(el)
+        → Adds at the beginning of the node (inside)
+        */
+
+        // node.prepend(el);
+
+
+        /*
+        node.before(el)
+        → Adds before the node (outside)
+        */
+
+        // node.before(el);
+
+
+        /*
+        node.after(el)
+        → Adds after the node (outside)
+        */
+
+        // node.after(el);
+
+
+        /*
+        ==========================
+        DELETE ELEMENT
+        ==========================
+
+        node.remove()
+        → Removes the selected node
+        */
+
+        // node.remove();
+
+    </script>
+
+</body>
+</html>
