@@ -1,0 +1,102 @@
+DOM MANIPULATION – INSERT & DELETE ELEMENTS
+
+DOM = Document Object Model.
+It allows JavaScript to CREATE, ADD, and REMOVE HTML elements dynamically.
+
+1. CREATE AN ELEMENT
+   let el = document.createElement("div");
+
+   → Creates a new <div> element.
+   → It is created in memory, but NOT yet visible on the webpage.
+
+   Example:
+   let el = document.createElement("div");
+   el.textContent = "Hello";
+
+
+2. APPEND – Add at the END (inside)
+   node.append(el);
+
+   If HTML is:
+   <div id="box">
+       <p>First</p>
+   </div>
+
+   After:
+   box.append(el);
+
+   Result:
+   <div id="box">
+       <p>First</p>
+       <div>Hello</div>   ← added at the END
+   </div>
+
+
+3. PREPEND – Add at the START (inside)
+   node.prepend(el);
+
+   Result:
+   <div id="box">
+       <div>Hello</div>   ← added at the START
+       <p>First</p>
+   </div>
+
+
+4. BEFORE – Add BEFORE the node (outside)
+   node.before(el);
+
+   If:
+   <div id="box">Box</div>
+
+   Result:
+   <div>Hello</div>       ← added before the box
+   <div id="box">Box</div>
+
+
+5. AFTER – Add AFTER the node (outside)
+   node.after(el);
+
+   Result:
+   <div id="box">Box</div>
+   <div>Hello</div>       ← added after the box
+
+
+6. REMOVE – Delete the node
+   node.remove();
+
+   Example:
+   let box = document.getElementById("box");
+   box.remove();
+
+   → Completely removes the element from the webpage.
+
+
+EASY WAY TO REMEMBER:
+
+   createElement() → CREATE a new element
+
+   append()        → ADD inside, at END
+   prepend()       → ADD inside, at START
+   before()        → ADD outside, BEFORE
+   after()         → ADD outside, AFTER
+   remove()        → DELETE the element
+
+
+COMPLETE EXAMPLE:
+
+   let box = document.getElementById("box");
+
+   let el = document.createElement("div");
+   el.textContent = "Hello World";
+
+   box.append(el);      // inside, end
+   box.prepend(el);     // inside, start
+   box.before(el);      // before box
+   box.after(el);       // after box
+   el.remove();         // delete el
+
+
+IMPORTANT:
+   createElement() = CREATE
+   append/prepend/before/after = ADD
+   remove() = DELETE
